@@ -14,7 +14,7 @@ function getLocation(){
         map = map.setView([latitude, longitude], 15);
         positionMarker = positionMarker.setLatLng([latitude, longitude]).addTo(map);
 
-        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}, positionAccuracy: ${position.coords.accuracy}`);
     },
     (error) => {
         console.error("Error getting location:", error);
