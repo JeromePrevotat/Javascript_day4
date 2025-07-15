@@ -6,8 +6,8 @@ let dragImg;
 let img = new Image();
 // ?
 img.crossOrigin = "Anonymous";
+// img.src = "http/machin.com/poop-emoji.png";
 img.src = "../resources/img/poop-emoji.png";
-// AJOUTEZ CECI POUR VOIR LE TIMING
 const imgWidth = 50;
 const imgHeight = 50;
 const canvas = document.createElement('canvas');
@@ -48,10 +48,6 @@ function addEventListeners() {
     // DROP ZONE
     // Cancel default behavior to allow dropping
     dropZone.addEventListener("dragenter", (event) => {
-        event.preventDefault();
-    });
-
-    dropZone.addEventListener("dragover", (event) => {
         event.preventDefault();
     });
 
